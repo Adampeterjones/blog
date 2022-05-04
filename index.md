@@ -1,7 +1,7 @@
-## Welcome to GitHub Pages
+## Adam's Build blog
 
-You can use the [editor on GitHub](https://github.com/Adampeterjones/blog/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
+This Blog keeps track of learning and project work that I have been around code and devops developments
+Although pretty bare right now I will be adding 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
