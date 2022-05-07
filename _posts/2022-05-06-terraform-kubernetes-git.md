@@ -1,5 +1,5 @@
 # using Terraform with gitlab to deploy multiple containers using a template
-after building an eks cluster and dploying all the components that go along with it (DNS, alb-ingress controllers etc) using terraform I thought it would be good to be able to create a template to handle deployments in kubernetes for deployments with similar requirements.
+after building an eks cluster and dploying all the components that go along with it (DNS, alb-ingress controllers etc) using terraform. I thought it would be good to be able to create a template to handle deployments in kubernetes for deployments with similar requirements.
 Now I know there is already whole host of other tools in the market which could do this such as:
 - kustomize - create a template with overlays to handle specifics
 - argocd or flux - attach a project to the system and allow manifests to be handled in a gitops way
