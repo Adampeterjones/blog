@@ -1,9 +1,3 @@
----
-layout: home
-list_title: Read Our Latest Posts
-title: ''
----
-
 # Adam's Build blog
 
 This Blog keeps track of learning and project work that I have been around code and devops developments
