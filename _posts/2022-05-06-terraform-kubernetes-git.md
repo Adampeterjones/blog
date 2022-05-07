@@ -13,7 +13,7 @@ Container repos at a project level can be enabled by going to:
 
  Settings -> General -> Visibility, project features, permissions
 
-![settings](images\container_settings.PNG)
+![settings](https://github.com/Adampeterjones/blog/blob/gh-pages/_posts/images/container_settings.PNG)
 
 
 Then switch the toggle to enable the containers
