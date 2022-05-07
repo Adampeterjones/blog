@@ -1,3 +1,4 @@
+list_title: Read Our Latest Posts
 
 # Adam's Build blog
 
