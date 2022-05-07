@@ -1,4 +1,4 @@
-This Blog keeps track of learning and project work that I have been around code and devops developments
+This Blog keeps a track of learning, projects, code and devops developments that I have been working on.
 Although pretty bare right now I will be adding more as i try things out.
 
 ## Coming soon
