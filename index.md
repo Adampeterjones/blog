@@ -1,5 +1,3 @@
-# Adam's Build blog
-
 This Blog keeps track of learning and project work that I have been around code and devops developments
 Although pretty bare right now I will be adding more as i try things out.
 
