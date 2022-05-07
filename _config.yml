@@ -1,4 +1,4 @@
-theme: jekyll-theme-midnight
+theme: minima
 title: Adam’s Build blog
 description: A document of learning across multiple clouds and codebases
 show_excerpts: true
