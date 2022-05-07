@@ -29,6 +29,6 @@ Ok so inevitably we had some things already in place as part of our wider implem
 we already control our gitlab projects using terraform and as part of this we have already implemented a Deploy token,  the detail from gitlab how to configure this can be found [here](https://docs.gitlab.com/ee/security/token_overview.html).  my suggestion would be to create a project token (at the top of your project tree to make life easier) and then store the value on the project as a masked variable in the cicd settings (only maintainers should be able to see this token).
 
 ### AWS role and external id
-To increase security we chose to do our deployments via a kubernetes cluster in our control,  the gitlab runner is hosted here and the deployment happens here.  This means we are able to assume a role in the account using an external id,  you dont have to follow this pattern;  feel free to use the AWS keys and secret values (Remember to keep them secure and dont expose them in the repos)
+To increase security we chose to do our deployments via a kubernetes cluster in our control,  the gitlab runner is hosted here and the deployment happens here.  This means we are able to assume a role in the account using an external id,  you dont have to follow this pattern;  feel free to use the AWS keys and secret values (Remember to keep them secure and dont expose them in the repos),  the options for your AWS connectivity via terraform are to be found [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 ### state file locations (S3)
