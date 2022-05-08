@@ -23,7 +23,7 @@ Container repos at a project level can be enabled by going to:
 
 Then switch the toggle to enable the containers
 
-![toggle](/blog/assets/CContainer_switch.PNG)
+![toggle](/blog/assets/Container_switch.PNG)
 
 we could now store our images alongside our repos (how to build these in gitlab is a story for another day) and we could then also deploy them across our kubernetes environments. 
 
