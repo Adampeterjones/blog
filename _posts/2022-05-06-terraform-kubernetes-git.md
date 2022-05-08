@@ -18,7 +18,7 @@ Container repos at a project level can be enabled by going to:
 
  Settings -> General -> Visibility, project features, permissions
 
-![settings](..%5Cassets%5Ccontainer_settings.PNG)
+![settings](/blog/assets/container_settings.PNG)
 
 
 Then switch the toggle to enable the containers
