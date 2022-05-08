@@ -18,12 +18,12 @@ Container repos at a project level can be enabled by going to:
 
  Settings -> General -> Visibility, project features, permissions
 
-![settings](/blog/docs/assets/container_settings.PNG)
+![settings](/blog/assets/container_settings.PNG)
 
 
 Then switch the toggle to enable the containers
 
-![toggle](..%5Cassets%5CContainer_switch.PNG)
+![toggle](/blog/assets/CContainer_switch.PNG)
 
 we could now store our images alongside our repos (how to build these in gitlab is a story for another day) and we could then also deploy them across our kubernetes environments. 
 
@@ -152,7 +152,7 @@ this creates an empty map for the manifest later,  this means that if you don't 
 ### gitlab-access.tf
 finally an interesting terraform file I hear you say! yes this is where things actually start to happen.  this file does two things:
 1. create a deployment token - this is put against a gitlab project,  you can identify the project by the id or the name.  the important thing here is that the deployment token is hierarchical,  so if you have a top level project underneath which all the containers will be built then this is a good place to put the token.  The image below represents this and also shows that the gitlab_token environment variable is allowing access at the company root:
-![token creation](..%5Cassets%5Cproject%20structure.png)) 
+![token creation](/blog/assets/project%20structure.png)) 
 
 I'm creating a username and generating a token that is limited to reading from the registry only.
 ```
