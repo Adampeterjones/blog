@@ -1,7 +1,7 @@
 # using Terraform with gitlab to deploy multiple containers using a template
 
 ## TL;DR
-You want to create a template to deploy multiple containers into EKS from a gitlab container repos using terraform and don't want to have access to the gitlab side automated without handling the tokens. then the terraform code you are looking for is here [tf_gitlab_k8](https://github.com/Adampeterjones/tf_gitlab_k8)
+You want to create a template to deploy multiple containers into EKS from a gitlab container repos; you want to use terraform and and have access to the gitlab without handling the tokens. then the terraform code you are looking for is here [tf_gitlab_k8](https://github.com/Adampeterjones/tf_gitlab_k8)
 
 ## background
 after building an eks cluster and deploying all the components that go along with it (DNS, alb-ingress controllers etc) using terraform. I thought it would be good to be able to create a template to handle deployments in kubernetes for deployments with similar requirements.
@@ -136,7 +136,7 @@ data "aws_eks_cluster_auth" "eks" {
 ```
 
 ### Variables.tf
-this declares contains all the variables (unsurprisingly),  i wont list the full contents here as it is all available in the repos
+this declares all the variables (unsurprisingly),  i wont list the full contents here as it is all available in the repos
 but the one that is worth noting is this section at the end of the file:
 
 ```
@@ -197,7 +197,7 @@ resource "kubernetes_secret_v1" "gitlab-token" {
 ```
 
 ### std-workers-deployment.tf
-this is the highpoint of the folder,  whe have done all the hard work now we have a large file which is a template.  in the first couple of lines we create the deployment resource and loop based on the contents of the manifest file (remember we declared this in the variables.tf earlier).
+this is the highpoint of the folder,  we have done all the hard work. Now we have this large file, which is a template.  in the first couple of lines we create the deployment resource and loop, based on the contents of the manifest file (remember we declared this in the variables.tf earlier).
 ```
 resource "kubernetes_deployment" "standard_worker_deployment" {
   for_each = var.manifest
@@ -225,7 +225,7 @@ a couple of things worth noting here though are:
           # service_account_name = "eks-lambda"
   ```
 
-now I have left this commented out in this example but it is possible to create a service account which can have IAM roles assigned to it, in this comment I would be using a service account which allows my pods to execute lambda functions.  I may cover this in a separate post in the future.
+I have left this commented out in this example but it is possible to create a service account which can have IAM roles assigned to it, in this comment I would be using a service account which allows my pods to execute lambda functions.  I may cover this in a separate post in the future.
 
 2. container environment variables
 the below code allows you to set some environment variables within the pod.  again this could be turned into a dynamic block if required or you can remove it you don't require it.
